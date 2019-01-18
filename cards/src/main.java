@@ -6,5 +6,10 @@ public class main {
     Deck deck = new Standard();
     deck.init();
     System.out.println(deck.getCards().toString());
+    deck.shuffle();
+    for(int i = 0; i < 12; i++) {
+      deck.deal();
+    }
+    System.out.println(deck.getCards().size());
   }
 }
